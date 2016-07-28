@@ -76,6 +76,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def topic_params
-      params.require(:topic).permit(:title, :describtion)
+      params.require(:topic).permit(:title, :description, :image)
     end
 end
