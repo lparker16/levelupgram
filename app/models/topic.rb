@@ -1,5 +1,5 @@
 class Topic < ActiveRecord::Base
- has_many :votes, dependent: :destroy
+    has_many :votes, dependent: :destroy
     has_attached_file :image, styles: {
       thumb: '100x100>',
       square: '200x200#',
