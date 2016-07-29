@@ -1,4 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+ <section class="se-container">
+    	<div class="se-slope">
+    		<article class="se-content">
+    			<h3>LiamGram</h3>
+    			<p>yolo #swag<i class="fa fa-smile-o"></i></p>
+    		</article>
+    	</div>
+    	<div class="se-slope">
+    		<!-- ... -->
+    	</div>
+    	<!-- ... -->
+ 
+ </section>
+</div>
 
 <h1>Listing Topics</h1>
 
@@ -17,7 +31,7 @@
         <td><%= topic.title %></td>
         <td><%= topic.describtion %></td>
             <% if topic.image? %>
-                <%= link_to (image_tag topic.image.url(:medium), class:'img-responsive'), topic_path(topic) %>
+            <td>   <%= link_to (image_tag topic.image.url(:medium), class:'img-responsive'), topic_path(topic) %></td>
             <% end %>
         <td><%= pluralize(topic.votes.count, "vote") %></td>
         <td><%= button_to '+1', upvote_topic_path(topic), method: :post %></td>
